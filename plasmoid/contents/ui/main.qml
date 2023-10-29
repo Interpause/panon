@@ -3,6 +3,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
+    CreateVenv{}
 
     readonly property var cfg:plasmoid.configuration
 
