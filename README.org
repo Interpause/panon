@@ -10,29 +10,27 @@ This is an audio spectrum analyzer for KDE panel.
 | org.kde.newstuff | >= 1.1 (kf 5.63) |
 If your KDE Framework is older than 5.63, see [[../../wiki/Troubleshooting#cannot-load-the-visual-effects-page-in-the-configuration-dialog][here]].
 ** Dependencies
+
+The plasmoid will create a venv and install Python dependencies automatically on first run. If your default Python is 3.12, manually creating the venv might be necessary.
    
 *** Arch Linux
 #+BEGIN_SRC sh
-sudo pacman -S qt5-websockets \
-    python-docopt python-numpy python-pyaudio python-cffi python-websockets 
+sudo pacman -S qt5-websockets
 #+END_SRC
 
 *** openSUSE
 #+BEGIN_SRC sh
-sudo zypper in libQt5WebSockets5 \
-    python3-docopt python3-numpy python3-PyAudio python3-cffi python3-websockets
+sudo zypper in libQt5WebSockets5
 #+END_SRC
 
 *** Ubuntu
 #+BEGIN_SRC sh
-sudo apt-get install qml-module-qt-websockets \
-    python3-docopt python3-numpy python3-pyaudio python3-cffi python3-websockets
+sudo apt-get install qml-module-qt-websockets
 #+END_SRC
 
 *** Solus
 #+BEGIN_SRC sh
-sudo eopkg install qt5-websockets  \
-   python-docopt PyAudio numpy python-cffi python-websockets
+sudo eopkg install qt5-websockets
 #+END_SRC
 
 ** Installation
@@ -89,4 +87,3 @@ kpackagetool5 -t Plasma/Applet --upgrade plasmoid
  |-------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+----------------|
  | [[file:panon/backend/source.py][source.py]] and [[file:panon/backend/spectrum.py][spectrum.py]] | adapted from [[https://github.com/ajalt/PyVisualizer][PyVisualizer]]                             |                |
  | =hsv2rgb= in [[file:plasmoid/contents/shaders/utils.fsh][utils.fsh]]                            | copied from [[https://gist.github.com/patriciogonzalezvivo/114c1653de9e3da6e1e3][GLSL-color.md]] |                |
-
